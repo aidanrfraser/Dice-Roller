@@ -19,8 +19,7 @@ def DiceRoll():
     if yess == 'y':
         Roller()
     else:
-        print("Ok, type y to roll if you change your mind!")
-        yess = input("")
+        yess = input("Ok, type y to roll if you change your mind!")
         if yess == 'y':
             Roller()
         else:
@@ -36,3 +35,10 @@ elif run == 'yeah':
     DiceRoll()
 elif run == "sure":
     DiceRoll()
+else:
+    run = input("Disappointing. I thought you were better than this. Are you sure about your decision? ")
+    if run == 'no':
+        print("Let's play then.")
+        DiceRoll()
+    else:
+        print("You're the worst.")
