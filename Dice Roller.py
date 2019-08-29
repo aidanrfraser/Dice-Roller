@@ -20,7 +20,7 @@ def DiceRoll():
             DiceRoll()
         else:
             print("Goodbye!")
-    if yess == 0:
+    else yess == n:
         print("Ok, type y to roll if you change your mind!")
         del yess
         yess = float(input(""))
@@ -36,4 +36,6 @@ elif run == 'y':
 elif run == 'ye':
     DiceRoll()
 elif run == 'yeah':
+    DiceRoll()
+elif run == "sure":
     DiceRoll()
