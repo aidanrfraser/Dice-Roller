@@ -20,7 +20,7 @@ def DiceRoll():
             DiceRoll()
         else:
             print("Goodbye!")
-    else yess == n:
+    else:
         print("Ok, type y to roll if you change your mind!")
         del yess
         yess = float(input(""))
