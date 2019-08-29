@@ -1,4 +1,11 @@
 import random
+def No():
+    run = input("Disappointing. I thought you were better than this. Are you sure about your decision? ")
+    if run == 'no':
+        print("Let's play then.")
+        DiceRoll()
+    else:
+        print("You're the worst.")
 def add(x,y):
     return x+y
 def Roller():
@@ -13,17 +20,13 @@ def Roller():
     if yess == 'y':
         Roller()
     else:
-        print("Goodbye!")
+        No()
 def DiceRoll():
     yess = input("Roll the dice? (y/n) ")
     if yess == 'y':
         Roller()
     else:
-        yess = input("Ok, type y to roll if you change your mind!")
-        if yess == 'y':
-            Roller()
-        else:
-            print("Ok, bye!")
+        No()
 run = input("Would you like to play a game? ")
 if run == 'yes':
     DiceRoll()
@@ -36,9 +39,4 @@ elif run == 'yeah':
 elif run == "sure":
     DiceRoll()
 else:
-    run = input("Disappointing. I thought you were better than this. Are you sure about your decision? ")
-    if run == 'no':
-        print("Let's play then.")
-        DiceRoll()
-    else:
-        print("You're the worst.")
+    No()
