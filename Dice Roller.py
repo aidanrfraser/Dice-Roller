@@ -4,8 +4,8 @@ def DiceRoll():
         return x+y
     min=1
     max=6
-    yess = float(input("Roll the dice? 1=yes, 0=no "))
-    if yess == 1:
+    yess = input("Roll the dice? (y/n) ")
+    if yess == 'y':
         d1=random.randint(min,max)
         print(d1)
         d2=random.randint(min,max)
@@ -13,18 +13,18 @@ def DiceRoll():
         print("The sum of the dice is ", add(d1,d2))
         if d1==d2:
             print("You got doubles!")
-        print("Type 1 to roll again!")
+        print("Type y to roll again!")
         del yess
-        yess = float(input(""))
-        if yess == 1:
+        yess = input("")
+        if yess == 'y':
             DiceRoll()
         else:
             print("Goodbye!")
     if yess == 0:
-        print("Ok, type 1 to roll if you change your mind!")
+        print("Ok, type y to roll if you change your mind!")
         del yess
         yess = float(input(""))
-        if yess == 1:
+        if yess == 'y':
             DiceRoll()
         else:
             print("Ok, bye!")
